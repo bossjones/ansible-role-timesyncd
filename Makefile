@@ -1,7 +1,7 @@
 site:
 	ansible-playbook -vvvv -i inventory/my-cluster/hosts.ini site.yml
 
-# provision:
+provision: site
 # 	ansible-playbook -vvvv -i inventory/my-cluster/hosts.ini provision.yml
 
 # reset:
