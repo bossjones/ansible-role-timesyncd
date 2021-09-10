@@ -1,0 +1,20 @@
+
+---
+
+- hosts: k3s_cluster
+  gather_facts: yes
+  become: yes
+  vars:
+    ntp_timezone: America/New_York
+    ntp_servers:
+      - 0.pool.ntp.org
+      - 1.pool.ntp.org
+      - 2.pool.ntp.org
+      - 3.pool.ntp.org
+    ntp_servers_fallback:
+      - 0.ubuntu.pool.ntp.org
+      - 1.ubuntu.pool.ntp.org
+      - 2.ubuntu.pool.ntp.org
+      - 3.ubuntu.pool.ntp.org
+  roles:
+    - role: ../
