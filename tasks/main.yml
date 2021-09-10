@@ -3,7 +3,7 @@
   package:
     name:
       - systemd-timesyncd
-    state: installed
+    state: present
   # when:
   #   - ansible_os_family == 'RedHat'
   #   - ansible_distribution_major_version is version('7', '>')
